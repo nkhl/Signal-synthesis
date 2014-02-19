@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <title>Signal synthesis</title>
+    <style>
+
+      body {
+          margin:0px;
+          padding:5px;
+          text-align:center;
+      }
+
+      canvas { 
+          outline:0;
+          border:1px solid #000;
+          margin-left: auto;
+          margin-right: auto;
+      }
+
+      .reduce_w {
+          width:70px
+      }
+      .increase_w {
+          width:320px
+      }
+
+      #controls1 {
+          position:relative;
+          right:10px;
+          top:10px;
+      }
+      #controls2 {
+          position:relative;
+          right:20px;
+          top:20px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="render">
+
+        <canvas id='c'></canvas>
+
+    </div>
+    <div id="controls1">
+
+        <label for="frequ">Frequencies:</label> 
+        <input id="frequ" type="text" class="increase_w" maxlength="2048" value="0 15 0 0 15 0 0 9 5.25"/>
+
+        <input id="update" type="button" value="Update"/>
+
+    </div>
+    <div id="controls2">
+
+        <label for="zoom">Zoom:</label> 
+        <input id="zoom" type="text" class="reduce_w" maxlength="8" value="1.5"/>
+
+        <label for="samples">Samples:</label>
+        <input id="samples" type="text" class="reduce_w" maxlength="8" value="100"/>
+
+        <label for="sample_rate">Samples/time unit:</label>
+        <input id="sample_rate" type="text" class="reduce_w" maxlength="8" value="100"/>
+        <label for="speed">Target FPS:</label>
+        <input id="speed" type="text" class="reduce_w" maxlength="8" value="10"/>
+
+    </div>
+
+    <script src="anim.js"></script>
+
+  </body>
+</html>
+
